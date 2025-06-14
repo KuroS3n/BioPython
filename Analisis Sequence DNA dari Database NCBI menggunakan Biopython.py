@@ -132,11 +132,11 @@ seq2 = str(records[1].seq)
 #Hamming Distance
 min_len = min(len(seq1), len(seq2))
 hamming = sum(a != b for a, b in zip(seq1[:min_len], seq2[:min_len]))
-print(f"🔸 Hamming Distance (first {min_len} bp): {hamming}")
+print(f"Hamming Distance (first {min_len} bp): {hamming}")
 
 #Levenshtein Distance
 lev = Levenshtein.distance(seq1, seq2)
-print(f"🔸 Levenshtein Distance: {lev}")
+print(f"Levenshtein Distance: {lev}")
 
 #Dot Plot
 max_bp = 10000
@@ -179,7 +179,7 @@ with open(fasta_filename, "w") as out_file:
     out_file.write(fasta_data)
 
 #Parsing dan tampilan sebagian isi
-print("🔍 Isi Sebagian File FASTA:\n")
+print("Isi Sebagian File FASTA:\n")
 for record in SeqIO.parse(fasta_filename, "fasta"):
     print(f"ID: {record.id}")
     print(f"Deskripsi: {record.description}")
